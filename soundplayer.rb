@@ -1,7 +1,11 @@
+# Copyright (c) 2009 Philippe Creux
+# Simple ruby library playing sound files via gstreamer
 require 'gst'
 
+# This class play sound files via gstreamer.
 class SoundPlayer
 
+  # @file: path to a sound file
   def initialize(file)
     @pipeline = Gst::Pipeline.new
     
@@ -37,6 +41,7 @@ class SoundPlayer
     end
   end
 
+  # play the sound
   def play
     @pipeline.play
     begin
@@ -47,6 +52,7 @@ class SoundPlayer
     end
   end
 
+  # stop playing
   def stop
     @loop.quit
     @pipeline.stop

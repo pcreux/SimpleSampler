@@ -1,0 +1,21 @@
+= SimpleSampler
+A Simple Sampler playing a sound when you push its button. Ya, I said Simple. :)
+
+= Installation
+SimpleSampler is aimed to be run on a Linux/Gtk environment.
+
+The following librairies are required:
+* ruby
+* libgtk2-ruby
+* libgst-ruby
+
+On Ubuntu/Debian environment, simply run:
+typewriter:: apt-get install ruby libgtk2-ruby libgst-ruby
+
+== Launch it!
+ruby sampler.rb
+
+== Sounds
+The sounds you want to get played have to be '.mp3' files stored in sub-directories of /sounds. Adding '-repeat' between the basename and the extension (for instance "birds-repeat.mp3" will make them loop till you toggle the button. Subdirectories are used to organize sounds by types.
+
+(c) 2009 Philippe Creux, released under the MIT license
